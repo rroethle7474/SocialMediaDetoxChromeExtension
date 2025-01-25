@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Time Healer</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    label { display: block; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Time Healer</h1>
+  <form id="settingsForm">
+    <label for="startHour">Start Hour:</label>
+    <input type="number" id="startHour" min="0" max="23" value="9">
+    <label for="endHour">End Hour:</label>
+    <input type="number" id="endHour" min="0" max="23" value="17">
+    <label for="redirectUrl">Redirect URL:</label>
+    <input type="text" id="redirectUrl" value="https://www.yahoo.com">
+    <button type="submit">Save Settings</button>
+  </form>
+
+  <script src="popup.js"></script>
+</body>
+</html>

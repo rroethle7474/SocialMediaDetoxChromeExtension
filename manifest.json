@@ -1,0 +1,34 @@
+{
+    "manifest_version": 3,
+    "name": "Time Healer",
+    "version": "1.0",
+    "description": "Redirects specified websites to other websites during preset times to help focus individual",
+    "permissions": [
+        "declarativeNetRequest",
+        "storage",
+        "tabs"
+    ],
+    "background": {
+      "service_worker": "timehealer.js"
+    },
+    "host_permissions": [
+      "*://*.youtube.com/*",
+      "*://*.x.com/*",
+      "*://*.twitter.com/*"
+    ],
+    "action": {
+      "default_popup": "timehealer_index_popup.html",
+      "default_icon": {
+        "16": "icons/th16.webp",
+        "48": "icons/th48.webp",
+        "128": "icons/th128.webp"
+      }
+    },
+    "declarative_net_request": {
+        "rule_resources": [{
+          "id": "ruleset_1",
+          "enabled": true,
+          "path": "rules.json"
+        }]
+      }
+  } 
